@@ -1,0 +1,30 @@
+{
+    "name": "M5Stack Module Template",
+    "description": "PCB template for M5Stack expansion modules with M-BUS connectors. This template provides a board outline matching M5Stack module dimensions with correctly placed connectors for M5Stack Core alignment. All IO pins on the M5Stack are accessible through M-BUS headers.",
+    "version": "1.0.0",
+    "author": "BotanicFields, Inc.",
+    "license": "CC0-1.0",
+    "kicad_version": "9.0",
+    "tags": [
+        "M5Stack",
+        "Module",
+        "Expansion",
+        "M-BUS",
+        "IoT"
+    ],
+    "url": "https://github.com/botanicfields/KiCad-Template-M5Stack",
+    "maintainer": "BotanicFields, Inc.",
+    "resources": {
+        "homepage": "https://github.com/botanicfields/KiCad-Template-M5Stack",
+        "repository": "https://github.com/botanicfields/KiCad-Template-M5Stack.git"
+    },
+    "metadata": {
+        "board_thickness": "1.0mm",
+        "features": [
+            "M5Stack module compatible dimensions",
+            "M-BUS pin headers with standard KiCad library pinout",
+            "Optional board notch for controller compatibility",
+            "All M5Stack IO accessible"
+        ]
+    }
+}
