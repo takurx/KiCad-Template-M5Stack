@@ -9,34 +9,74 @@
 	(paper "A4")
 	(title_block
 		(title "BF-021")
-		(date "2022-02-05")
-		(rev "V01L04")
+		(date "2025-12-15")
+		(rev "V01L05")
 		(company "Copyright 2022 BotanicFields, Inc.")
 		(comment 1 "Template of M5Stack Module ")
+		(comment 2 "https://github.com/botanicfields/KiCad-Template-M5Stack")
 	)
 	(layers
 		(0 "F.Cu" signal)
 		(2 "B.Cu" signal)
-		(9 "F.Adhes" user)
-		(11 "B.Adhes" user)
+		(9 "F.Adhes" user "F.Adhesive")
+		(11 "B.Adhes" user "B.Adhesive")
 		(13 "F.Paste" user)
 		(15 "B.Paste" user)
-		(5 "F.SilkS" user)
-		(7 "B.SilkS" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
 		(1 "F.Mask" user)
 		(3 "B.Mask" user)
-		(17 "Dwgs.User" user)
-		(19 "Cmts.User" user)
-		(21 "Eco1.User" user)
-		(23 "Eco2.User" user)
+		(17 "Dwgs.User" user "User.Drawings")
+		(19 "Cmts.User" user "User.Comments")
+		(21 "Eco1.User" user "User.Eco1")
+		(23 "Eco2.User" user "User.Eco2")
 		(25 "Edge.Cuts" user)
 		(27 "Margin" user)
-		(31 "F.CrtYd" user)
-		(29 "B.CrtYd" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
 		(35 "F.Fab" user)
 		(33 "B.Fab" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0.05)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
@@ -6410,7 +6450,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6423,7 +6463,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "0.1181 in"
+		(gr_text "3.0000 mm"
 			(at 153.85 51.5 90)
 			(layer "Dwgs.User")
 			(uuid "3cae1a87-6f82-4e15-a027-2bacfa526693")
@@ -6446,7 +6486,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6459,7 +6499,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "0.9843 in"
+		(gr_text "25.0000 mm"
 			(at 93.85 87.5 90)
 			(layer "Dwgs.User")
 			(uuid "46a2c477-bf2b-416d-a115-3954f9710219")
@@ -6482,7 +6522,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6495,7 +6535,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "0.2756 in"
+		(gr_text "7.0000 mm"
 			(at 146.5 38.85 0)
 			(layer "Dwgs.User")
 			(uuid "5ac4bf09-37d0-4b9a-b675-c3bb1e0d8a2e")
@@ -6518,7 +6558,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6531,7 +6571,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "0.3543 in"
+		(gr_text "9.0000 mm"
 			(at 104.5 38.85 0)
 			(layer "Dwgs.User")
 			(uuid "5b4033fe-6d8e-4b43-bb2c-b66c77d681c1")
@@ -6554,7 +6594,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6567,7 +6607,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "0.2362 in"
+		(gr_text "6.0000 mm"
 			(at 103 103.85 0)
 			(layer "Dwgs.User")
 			(uuid "7ab1cb67-0a84-4638-ae4b-1eb2f11fbdb2")
@@ -6590,7 +6630,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6603,7 +6643,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "1.9685 in"
+		(gr_text "50.0000 mm"
 			(at 88.85 75 90)
 			(layer "Dwgs.User")
 			(uuid "7f283b5e-6d50-45aa-95e4-1c636cec3c71")
@@ -6626,7 +6666,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6639,7 +6679,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "0.0787 in"
+		(gr_text "2.0000 mm"
 			(at 93.85 51 90)
 			(layer "Dwgs.User")
 			(uuid "8660c2b8-0a40-4881-ab20-5b74be22cde4")
@@ -6662,7 +6702,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6675,7 +6715,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "0.1575 in"
+		(gr_text "4.0000 mm"
 			(at 111 43.85 0)
 			(layer "Dwgs.User")
 			(uuid "8dae0d4c-c4ee-4d17-8989-b47c39af0f61")
@@ -6698,7 +6738,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6711,7 +6751,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "1.9685 in"
+		(gr_text "50.0000 mm"
 			(at 125 33.85 0)
 			(layer "Dwgs.User")
 			(uuid "ab3f3218-fa4f-4276-bf37-3583bb5fedb1")
@@ -6734,7 +6774,7 @@
 		(format
 			(prefix "")
 			(suffix "")
-			(units 0)
+			(units 3)
 			(units_format 1)
 			(precision 4)
 		)
@@ -6747,7 +6787,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "0.1181 in"
+		(gr_text "3.0000 mm"
 			(at 148.5 43.85 0)
 			(layer "Dwgs.User")
 			(uuid "fa3f8658-b48e-40b9-9999-0c770aa1b782")
